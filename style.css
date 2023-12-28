@@ -7,6 +7,7 @@
 
 .answer-button {
     flex-basis: 50%;
+    transition: .2s;
 }
 
 #button-container {
@@ -15,4 +16,11 @@
     flex-wrap: wrap;
     /*width: 80vw;
     height: 80vw;*/
+}
+
+.correct {
+    background-color: green;
+}
+.incorrect {
+    background-color: red;
 }
