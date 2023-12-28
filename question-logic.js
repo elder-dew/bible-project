@@ -131,10 +131,11 @@ const bibleTriviaQuestions = [
 window.onload = nextQuestion;
 
 function nextQuestion() {
-    questionNum = Math.floor(Math.random() * bibleTriviaQuestions.length - 1);
-    while (questionNum == currentQuestionIndex) questionNum = Math.floor(Math.random() * bibleTriviaQuestions.length - 1);
+    questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1));
+    while (questionNum == currentQuestionIndex) { questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1)); }
     currentQuestionIndex = questionNum;
     freeze = false;
+    console.log(questionNum + " the current question list length is: " + bibleTriviaQuestions.length);
     questionP.innerText = bibleTriviaQuestions[questionNum].question;
 
     for (let i = 0; i < bibleTriviaQuestions[questionNum].options.length; i++) {
