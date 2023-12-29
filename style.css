@@ -1,34 +1,14 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-#gameCont {
-    height: 100vh;
-    width: 100%;
+body {
     overflow: hidden;
-}
-
-#screen {
-    display: flex;
-    height: 200vh;
-    flex-direction: column;
-}
-
-#main-game, #leaderboardPage {
-    width: 100%;
-    height: 100vh;
-    transition: all, 1s;
+    margin: 0;
 }
 
 #main-game {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#leaderboardPage {
-    
+    height: 100vh;
+    width: 100%;
 }
 
 #header {
