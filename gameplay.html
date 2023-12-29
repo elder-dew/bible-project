@@ -10,15 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Trivia Page</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="question-logic.js" defer></script>
-    <script type="text/javascript" src="leaderboard.js" defer></script>
+    <script type="text/javascript" src="./question-logic.js" defer></script>
+    <script type="text/javascript" src="./leaderboard.js" defer></script>
+    <script type="text/javascript" src="./question-dump.js"></script>
 </head>
 
 <body>
     <div id="main-game">
         <h1 id="header">Welcome to Bible Trivia</h1>
         <p id="question"></p>
-        <p id="scoreP">0</p>
+        <p id="scoreP">Your score is: 0</p>
+        <h2 id="timer"></h2>
         <div id="button-container">
             <button class="answer-button" onclick="checkAnswer(this)">Answer 1</button>
             <button class="answer-button" onclick="checkAnswer(this)">Answer 2</button>

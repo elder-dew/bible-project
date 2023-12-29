@@ -4,6 +4,6 @@ var playerPlace = document.getElementById("placeDropdown");
 var playerScore = sessionStorage.getItem('score');
 
 function populatePlayerList() {
-    sessionStorage.removeItem('score');
     playerList.innerHTML += `<div>${playerName.value} of ${playerPlace.value}: ${playerScore}</div>`;
+    sessionStorage.removeItem('score');
 }
