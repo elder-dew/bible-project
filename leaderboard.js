@@ -1,10 +1,8 @@
 var playerList = document.querySelector("#playerList");
-var textBox = document.getElementById("username")
-
-
+var playerName = document.getElementById("nameDropdown");
+var playerPlace = document.getElementById("placeDropdown")
 
 function populatePlayerList() {
-    playerList.innerHTML += `<div>${textBox.value}: ${score}</div>`;
+    playerList.innerHTML += `<div>${playerName.value} of ${playerPlace.value}: ${score}</div>`;
     
-    textBox.value = null;
 }

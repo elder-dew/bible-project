@@ -1,17 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
-    <script type="text/javascript" src="leaderboard.js" defer></script>
-</head>
-<body>
-    <h1>Leaderboard!</h1>
-    <textarea name="name" id="username" cols="30" rows="10">Insert your username!</textarea>
-    <div id="playerList">
 
-    </div>
-    <button onclick="populatePlayerList()">Don't click me</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <script type="text/javascript" src="leaderboard.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1>Leaderboard!</h1>
+  <div id="playerList">
+
+  </div>
+
+  <select name="Name" id="nameDropdown">
+    <option>Adam</option>
+    <option>Eve</option>
+    <option>Noah</option>
+    <option>Abraham</option>
+    <option>Sarah</option>
+    <option>Isaac</option>
+    <option>Rebekah</option>
+    <option>Jacob</option>
+    <option>Joseph</option>
+    <option>Moses</option>
+    <option>Miriam</option>
+    <option>Aaron</option>
+    <option>Ruth</option>
+    <option>David</option>
+    <option>Solomon</option>
+    <option>Elijah</option>
+    <option>Esther</option>
+    <option>Isaiah</option>
+    <option>Mary</option>
+    <option>Joseph (husband of Mary)</option>
+    <option>John</option>
+    <option>Peter</option>
+    <option>Paul</option>
+    <option>James (son of Zebedee)</option>
+    <option>James (son of Alphaeus)</option>
+    <option>Andrew</option>
+    <option>Philip</option>
+    <option>Thomas</option>
+    <option>Matthew</option>
+    <option>Simon</option>
+    <option>Thaddeus</option>
+    <option>Bartholomew</option>
+    <option>Matthias</option>
+    <option>Timothy</option>
+    <option>Titus</option>
+    <option>Philemon</option>
+    <option>Priscilla</option>
+    <option>Aquila</option>
+    <option>Lydia</option>
+    <option>Phoebe</option>
+  </select>
+  <span>of</span>
+  <select name="Place" id="placeDropdown">
+    <option>Bethlehem</option>
+    <option>Jerusalem</option>
+    <option>Nazareth</option>
+    <option>Capernaum</option>
+    <option>Galilee</option>
+    <option>Gethsemane</option>
+    <option>Mount Sinai</option>
+    <option>Mount Carmel</option>
+    <option>Mount Horeb</option>
+    <option>Mount Nebo</option>
+    <option>Ephesus</option>
+    <option>Corinth</option>
+    <option>Thessalonica</option>
+    <option>Antioch</option>
+    <option>Babylon</option>
+    <option>Jericho</option>
+    <option>Canaan</option>
+    <option>Samaria</option>
+    <option>Damascus</option>
+    <option>Shiloh</option>
+    <option>Bethel</option>
+    <option>Sodom</option>
+    <option>Gomorrah</option>
+    <option>Eden</option>
+    <option>Sinai</option>
+    <option>Jordan</option>
+    <option>Tiberias</option>
+    <option>Moriah</option>
+    <option>Zion</option>
+    <option>Hebron</option>
+    <option>Mount of Olives</option>
+    <option>Joppa</option>
+    <option>Ararat</option>
+    <option>Nineveh</option>
+    <option>Beersheba</option>
+    <option>Bethany</option>
+    <option>Bethsaida</option>
+    <option>Dan</option>
+    <option>Gerizim</option>
+    <option>Mamre</option>
+    <option>Shechem</option>
+    <option>Tabgha</option>
+    <option>Tarshish</option>
+  </select>
+
+  <button onclick="populatePlayerList()">Chede time!</button>
 </body>
+
 </html>
