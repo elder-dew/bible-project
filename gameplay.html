@@ -1,0 +1,32 @@
+<!--This website was created by Elder Dew and Elder Glenn-->
+<!--California Arcadia Mission, 2022-2025-->
+<!--We created this website to glorify our Father in Heaven and assist him in his work and his glory to bring to pass the immortality and eternal life of man-->
+<!--God be thanked for the matchless gift of his Divine Son-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Trivia Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="question-logic.js" defer></script>
+    <script type="text/javascript" src="leaderboard.js" defer></script>
+</head>
+
+<body>
+    <div id="main-game">
+        <h1 id="header">Welcome to Bible Trivia</h1>
+        <p id="question"></p>
+        <p id="scoreP">0</p>
+        <div id="button-container">
+            <button class="answer-button" onclick="checkAnswer(this)">Answer 1</button>
+            <button class="answer-button" onclick="checkAnswer(this)">Answer 2</button>
+            <button class="answer-button" onclick="checkAnswer(this)">Answer 3</button>
+            <button class="answer-button" onclick="checkAnswer(this)">Answer 4</button>
+        </div>
+        <button onclick="sessionStorage.setItem('score', score); window.location.href = './leaderboard.html'">Okay I'm done</button>
+    </div>
+</body>
+
+</html>
