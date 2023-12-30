@@ -12,10 +12,6 @@ instituteButton.addEventListener('click', () => { OpenPopup(institutePopup)});
 churchButton.addEventListener('click', () => { OpenPopup(churchPopup)});
 
 function OpenPopup(popup) {
-    //if (popup.classList.contains('open')) {
-    //    ClosePopup(popup);
-    //    return
-    //}
     popup.classList.add('open');
 }
 
