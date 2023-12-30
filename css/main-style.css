@@ -1,0 +1,13 @@
+body {
+    background-color: #BBB6DF;
+    color: #FCFCFF;
+}
+
+button {
+    background-color: #A30B37;
+    border: none;
+    box-shadow: 0 0 5px black;
+    color: #FCFCFF;
+    font-family: 'Bebas Neue';
+    font-size: 1.2em;
+}

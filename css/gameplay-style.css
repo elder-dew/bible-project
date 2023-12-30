@@ -1,6 +1,7 @@
 body {
     overflow: hidden;
     margin: 0;
+    font-family: 'Acme';
 }
 
 #main-game {
@@ -41,6 +42,7 @@ body {
 #question {
     padding: 0 4%;
     text-align: center;
+    font-size: 1.8em;
 }
 
 .correct {

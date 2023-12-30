@@ -1,7 +1,3 @@
-<!--This website was created by Elder Dew and Elder Glenn-->
-<!--California Arcadia Mission, 2022-2025-->
-<!--We created this website to glorify our Father in Heaven and assist him in his work and his glory to bring to pass the immortality and eternal life of man-->
-<!--God be thanked for the matchless gift of his Divine Son-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Trivia Page</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="../css/gameplay-style.css">
     <script type="text/javascript" src="../js/question-logic.js" defer></script>
     <script type="text/javascript" src="../js/leaderboard.js" defer></script>
     <script type="text/javascript" src="../js/question-dump.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
 </head>
 
 <body>
     <div id="main-game">
-        <h1 id="header">Welcome to Bible Trivia</h1>
         <p id="question"></p>
         <p id="scoreP">Your score is: 0</p>
         <h2 id="timer"></h2>
@@ -27,7 +25,8 @@
             <button class="answer-button" onclick="checkAnswer(this)"><span>Answer 1</span></button>
             <button class="answer-button" onclick="checkAnswer(this)"><span>Answer 1</span></button>
         </div>
-        <button onclick="sessionStorage.setItem('score', score); window.location.href = './leaderboard.html'">Okay I'm done</button>
+        <!--<button onclick="sessionStorage.setItem('score', score); window.location.href = './leaderboard.html'">Okay I'm
+            done</button>-->
     </div>
 </body>
 
