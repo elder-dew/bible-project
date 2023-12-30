@@ -13,7 +13,7 @@ body {
 }
 
 #timer {
-
+    
 }
 
 #header {
@@ -44,7 +44,21 @@ body {
 
 .correct {
     background-color: green;
+    transform: rotateY(180deg);
 }
+
+.correct span {
+    transition: .2s;
+    display: inline-block;
+    transform: rotateY(180deg);
+}
+
 .incorrect {
     background-color: red;
+    transform: rotateX(180deg);
+}
+
+.incorrect span {
+    display: inline-block;
+    transform: rotateX(180deg);
 }

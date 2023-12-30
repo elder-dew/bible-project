@@ -25,7 +25,7 @@ function nextQuestion() {
 
   for (let i = 0; i < answerArray.length; i++) {
     const answerOption = answerArray[i];
-    buttons[i].textContent = answerOption;
+    buttons[i].innerHTML = `<span>${answerOption}</span>`;
     buttons[i].classList = "answer-button";
   }
 }
