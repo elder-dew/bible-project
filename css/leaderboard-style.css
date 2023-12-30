@@ -27,9 +27,26 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
+    text-shadow: 3px 3px 20px black;
+    /*-1px -1px black,
+    1px 1px black,
+    1px -1px black,
+    -1px 1px black;*/
+    font-size: larger;
 }
 
 #familyHistory {
-    background-image: url('./images/tree-branches.jpg');
+    background-image: url('../images/tree-branches.jpg');
     background-size: cover;
+}
+
+#institute {
+    background-image: url('../images/scriptures.jpg');
+    background-size: cover;
+}
+
+#church {
+    background-image: url('../images/church.jpg');
+    background-size: cover;
+    background-position: 50%;
 }
