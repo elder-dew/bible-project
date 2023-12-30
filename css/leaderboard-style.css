@@ -20,6 +20,26 @@ body {
     gap: 5px;
 }
 
+#playerList {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    overflow-y: scroll;
+    height: 30%;
+    margin-bottom: 8px;
+}
+
+.player {
+    padding: 6%;
+    background-color: #BB4430;
+    color: #EFE6DD;
+    text-align: center;
+    width: 100%;
+}
+
+
+/*YSA Activity Stuff*/
 #activitiesCont {
     margin-top: auto;
     display: flex;
@@ -99,6 +119,7 @@ body {
         flex-direction: row;
         column-gap: 10px;
     }
+
     .ysaActivity {
         height: 80px;
     }

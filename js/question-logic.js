@@ -41,6 +41,7 @@ function checkAnswer(answerButton) {
     setTimeout(nextQuestion, 500);
   }
   else {
+    if(answerButton.classList.contains('incorrect')) return;
     answerButton.classList.add('incorrect');
     score -= 1;
     setScore();

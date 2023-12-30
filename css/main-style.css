@@ -1,13 +1,14 @@
 body {
-    background-color: #BBB6DF;
-    color: #FCFCFF;
+    background-color: #FFFDD0;
+    color: #39393A;
+    font-family: 'Acme';
 }
 
 button {
-    background-color: #A30B37;
+    background-color: #BCD979;
     border: none;
     box-shadow: 0 0 5px black;
-    color: #FCFCFF;
+    color: #39393A;
     font-family: 'Bebas Neue';
     font-size: 1.2em;
 }
