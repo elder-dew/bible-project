@@ -2,8 +2,31 @@ var playerList = document.querySelector("#playerList");
 var playerName = document.getElementById("nameDropdown");
 var playerPlace = document.getElementById("placeDropdown");
 var playerScore = sessionStorage.getItem('score');
+var submitButton = document.getElementById('submitButton');
+var newPlayerDb = playerDb;
+console.log(playerDb)
+
+playerDb.items.sort(function (a, b) { return b.score - a.score })
+
+
+playerDb.items.forEach(element => {
+    playerList.innerHTML += `<div class='player'>${element.name}: ${element.score}</div>`
+});
 
 function populatePlayerList() {
-    playerList.innerHTML += `<div>${playerName.value} of ${playerPlace.value}: ${playerScore}</div>`;
+    playerDb.items.append(
+        {
+            'name': `${playerName.value} of ${playerPlace.value}`,
+            'score': `${playerScore}`
+        },);
+    playerList.innerHTML = "";
+    playerDb.items.sort(function (a, b) { return b.score - a.score })
+
+    playerDb.items.forEach(element => {
+        playerList.innerHTML += `<div class='player'>${element.name}: ${element.score}</div>`
+    });
+    /*playerList.innerHTML += `<div class='player' id='newPlayer'>${playerName.value} of ${playerPlace.value}: ${playerScore}</div>`;
+    window.location.href = '#newPlayer';*/
+    submitButton.remove();
     sessionStorage.removeItem('score');
 }

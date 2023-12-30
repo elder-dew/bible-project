@@ -22,10 +22,12 @@ body {
 
 #playerList {
     display: flex;
+    scroll-behavior: smooth;
     flex-direction: column;
     width: 60%;
     align-items: center;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 30%;
     margin-bottom: 8px;
 }
