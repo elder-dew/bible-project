@@ -1,7 +1,6 @@
 body {
     overflow: hidden;
     margin: 0;
-    
 }
 
 #main-game {
@@ -21,7 +20,7 @@ body {
 }
 
 .answer-button {
-    flex-basis: 50%;
+    flex-basis: 45%;
     transition: .2s;
 }
 
@@ -31,6 +30,8 @@ body {
     flex-wrap: wrap;
     width: 80%;
     height: 80vw;
+    gap: 2px;
+    justify-content: center;
 }
 
 #scoreP {
