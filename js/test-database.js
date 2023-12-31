@@ -14,7 +14,7 @@ playerDb = {
         },
         {
             'name': 'Peterson',
-            'score': 15
+            'score': 5
         },
         {
             'name': 'Shakespear',
@@ -22,7 +22,7 @@ playerDb = {
         },
         {
             'name': 'Uribe',
-            'score': 9
+            'score': 4
         },
         {
             'name': 'Christianson',
@@ -30,15 +30,15 @@ playerDb = {
         },
         {
             'name': 'Hodges',
-            'score': 14
+            'score': 3
         },
         {
             'name': 'Rupp',
-            'score': 16
+            'score': 1
         },
         {
             'name': 'Dew',
-            'score': 19
+            'score': 0
         },
 
     ]

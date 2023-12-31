@@ -14,17 +14,26 @@ playerDb.items.forEach(element => {
 });
 
 function populatePlayerList() {
-    playerDb.items.append(
+    playerDb.items.push(
         {
             'name': `${playerName.value} of ${playerPlace.value}`,
             'score': `${playerScore}`
-        },);
-    playerList.innerHTML = "";
+        });
     playerDb.items.sort(function (a, b) { return b.score - a.score })
 
+    playerList.innerHTML = "";
     playerDb.items.forEach(element => {
+
+        // Check to see if it's the new player
+        if (element.name == `${playerName.value} of ${playerPlace.value}`) {
+            playerList.innerHTML += `<div class='player' id='newPlayer'>${element.name}: ${element.score}</div>`;
+            return
+        }
+
         playerList.innerHTML += `<div class='player'>${element.name}: ${element.score}</div>`
     });
+    // Scroll to new player
+    window.location.href = "#newPlayer"
     /*playerList.innerHTML += `<div class='player' id='newPlayer'>${playerName.value} of ${playerPlace.value}: ${playerScore}</div>`;
     window.location.href = '#newPlayer';*/
     submitButton.remove();

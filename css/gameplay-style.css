@@ -46,6 +46,23 @@ body {
     font-size: 1.8em;
 }
 
+.timerInd {
+    animation-duration: 1.5s;
+    position: fixed;
+    animation-name: fadeUp;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 0%;
+    }
+}
+
 .correct {
     background-color: green;
     transform: rotateY(180deg);
