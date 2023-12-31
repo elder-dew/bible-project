@@ -5,9 +5,8 @@ var freeze;
 var score = 0;
 var scoreP = document.getElementById("scoreP");
 const pages = document.querySelectorAll(".page")
-var startTime = Date.now();
 var timerObj = document.getElementById('timer')
-var gameTime = 25;
+var gameTime = 60;
 var timePenalty = 2;
 
 window.onload = nextQuestion;
@@ -41,7 +40,7 @@ function checkAnswer(answerButton) {
     setTimeout(nextQuestion, 500);
   }
   else {
-    if(answerButton.classList.contains('incorrect')) return;
+    if (answerButton.classList.contains('incorrect')) return;
     answerButton.classList.add('incorrect');
     score -= 1;
     setScore();
@@ -53,6 +52,18 @@ function setScore() {
   scoreP.textContent = `Your score is ${score}`;
 }
 
+function StartTimer() {
+  startTime = Date.now()
+  console.log("It's happening")
+  setInterval(() => {
+    var timeLeft = (gameTime - Math.floor((Date.now() - startTime) / 1000));
+    if (timeLeft <= 0) {
+      sessionStorage.setItem('score', score);
+      window.location.href = './leaderboard.html'
+    }
+    timerObj.innerHTML = `Time: ${timeLeft}`;
+  }, 100);
+}
 /*function switchPage(direction) {
   if (direction === 'down') {
     pages.forEach(
@@ -68,12 +79,3 @@ function setScore() {
     console.log("I'm confused")
   }
 }*/
-
-setInterval(() => {
-  var timeLeft = (gameTime - Math.floor((Date.now() - startTime) / 1000));
-  if (timeLeft <= 0) {
-    sessionStorage.setItem('score', score);
-    window.location.href = './leaderboard.html'
-  }
-  timerObj.innerHTML = `Time: ${timeLeft}`;
-}, 100);

@@ -3,6 +3,7 @@ var playerName = document.getElementById("nameDropdown");
 var playerPlace = document.getElementById("placeDropdown");
 var playerScore = sessionStorage.getItem('score');
 var submitButton = document.getElementById('submitButton');
+var leaderBoardCont = document.getElementById('leaderboardControlsCont');
 var newPlayerDb = playerDb;
 console.log(playerDb)
 
@@ -36,6 +37,6 @@ function populatePlayerList() {
     window.location.href = "#newPlayer"
     /*playerList.innerHTML += `<div class='player' id='newPlayer'>${playerName.value} of ${playerPlace.value}: ${playerScore}</div>`;
     window.location.href = '#newPlayer';*/
-    submitButton.remove();
+    leaderBoardCont.remove();
     sessionStorage.removeItem('score');
 }
