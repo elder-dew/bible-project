@@ -11,11 +11,11 @@ var timePenalty = 2;
 
 window.onload = nextQuestion();
 
-var newTimeInd = document.createElement('div',)
+/*var newTimeInd = document.createElement('p',)
 var newTimeIndWords = document.createTextNode('+1s')
 newTimeInd.appendChild(newTimeIndWords)
 newTimeInd.classList.add('timerInd')
-timerObj.parentNode.insertBefore(newTimeInd, timerObj)
+timerObj.parentNode.insertBefore(newTimeInd, timerObj)*/
 
 function nextQuestion() {
   questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1));
