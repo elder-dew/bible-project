@@ -9,7 +9,13 @@ var timerObj = document.getElementById('timer')
 var gameTime = 60;
 var timePenalty = 2;
 
-window.onload = nextQuestion;
+window.onload = nextQuestion();
+
+var newTimeInd = document.createElement('div',)
+var newTimeIndWords = document.createTextNode('+1s')
+newTimeInd.appendChild(newTimeIndWords)
+newTimeInd.classList.add('timerInd')
+timerObj.parentNode.insertBefore(newTimeInd, timerObj)
 
 function nextQuestion() {
   questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1));
@@ -18,7 +24,6 @@ function nextQuestion() {
   currentQuestionIndex = questionNum;
   var answerArray = bibleTriviaQuestions[questionNum].options;
   answerArray.sort(() => Math.random() - 0.5);
-  console.log(answerArray)
   freeze = false;
   questionP.innerText = bibleTriviaQuestions[questionNum].question;
 
@@ -54,7 +59,6 @@ function setScore() {
 
 function StartTimer() {
   startTime = Date.now()
-  console.log("It's happening")
   setInterval(() => {
     var timeLeft = (gameTime - Math.floor((Date.now() - startTime) / 1000));
     if (timeLeft <= 0) {
