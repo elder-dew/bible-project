@@ -18,6 +18,8 @@ newTimeInd.classList.add('timerInd')
 timerObj.parentNode.insertBefore(newTimeInd, timerObj)*/
 
 function nextQuestion() {
+  timerObj.classList = "null"
+
   questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1));
   while (questionNum == currentQuestionIndex) { questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1)); }
   console.log(questionNum)
@@ -41,12 +43,14 @@ function checkAnswer(answerButton) {
     score += 1;
     setScore();
     startTime += 1000;
+    timerObj.classList.add('answerCorrect')
     freeze = true;
     setTimeout(nextQuestion, 500);
   }
   else {
     if (answerButton.classList.contains('incorrect')) return;
     answerButton.classList.add('incorrect');
+    timerObj.classList.add('answerIncorrect');
     score -= 1;
     setScore();
     startTime -= 2000;
