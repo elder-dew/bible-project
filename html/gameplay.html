@@ -21,7 +21,7 @@
     <div id="startScreen">
         <div>
             <p>Ready?</p>
-            <button onclick="ClearScreen()">Play!&nbsp;</button>
+            <button onclick="ClearScreen()">Play!</button>
         </div>
     </div>
 
@@ -29,7 +29,9 @@
         <p id="question"></p>
         <p id="scoreP"><b>Your score is: 0</b></p>
         <!--<span class="timerInd">-2s</span>-->
-        <h2 id="timer"></h2>
+        <div id="timerCont">
+            <h2 id="timer"></h2>
+        </div>
         <div id="button-container">
             <button class="answer-button" onclick="checkAnswer(this)"><span></span></button>
             <button class="answer-button" onclick="checkAnswer(this)"><span></span></button>

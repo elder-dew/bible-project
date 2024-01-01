@@ -68,18 +68,3 @@ function StartTimer() {
     timerObj.innerHTML = `Time: ${timeLeft}`;
   }, 100);
 }
-/*function switchPage(direction) {
-  if (direction === 'down') {
-    pages.forEach(
-      pages => (pages.style.transform = `translateY(-5%)`)
-    )
-  }
-  else if (direction === 'up') {
-    pages.forEach(
-      pages => (pages.style.transform = `translateY(5%)`)
-    )
-  }
-  else {
-    console.log("I'm confused")
-  }
-}*/

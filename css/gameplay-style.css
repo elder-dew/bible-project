@@ -65,6 +65,11 @@ body {
     justify-content: center;
 }
 
+#timerCont {
+    display: flex;
+    flex-direction: row;
+}
+
 #scoreP {
     margin-top: auto;
     user-select: none;
@@ -79,8 +84,7 @@ body {
 
 .timerInd {
     animation-duration: 1.5s;
-    position: fixed;
-    animation-name: fadeUp;
+    /*animation-name: fadeUp;*/
     animation-fill-mode: forwards;
 }
 
