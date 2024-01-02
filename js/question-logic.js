@@ -11,13 +11,15 @@ var timePenalty = 2;
 
 window.onload = nextQuestion();
 
-var newTimeInd = document.createElement('div',)
+/*var newTimeInd = document.createElement('p',)
 var newTimeIndWords = document.createTextNode('+1s')
 newTimeInd.appendChild(newTimeIndWords)
 newTimeInd.classList.add('timerInd')
-timerObj.parentNode.insertBefore(newTimeInd, timerObj)
+timerObj.parentNode.insertBefore(newTimeInd, timerObj)*/
 
 function nextQuestion() {
+  timerObj.classList = "null"
+
   questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1));
   while (questionNum == currentQuestionIndex) { questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1)); }
   console.log(questionNum)
@@ -41,12 +43,14 @@ function checkAnswer(answerButton) {
     score += 1;
     setScore();
     startTime += 1000;
+    timerObj.classList.add('answerCorrect')
     freeze = true;
     setTimeout(nextQuestion, 500);
   }
   else {
     if (answerButton.classList.contains('incorrect')) return;
     answerButton.classList.add('incorrect');
+    timerObj.classList.add('answerIncorrect');
     score -= 1;
     setScore();
     startTime -= 2000;
@@ -68,18 +72,3 @@ function StartTimer() {
     timerObj.innerHTML = `Time: ${timeLeft}`;
   }, 100);
 }
-/*function switchPage(direction) {
-  if (direction === 'down') {
-    pages.forEach(
-      pages => (pages.style.transform = `translateY(-5%)`)
-    )
-  }
-  else if (direction === 'up') {
-    pages.forEach(
-      pages => (pages.style.transform = `translateY(5%)`)
-    )
-  }
-  else {
-    console.log("I'm confused")
-  }
-}*/

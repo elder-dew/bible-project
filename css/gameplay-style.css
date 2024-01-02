@@ -44,6 +44,18 @@ body {
 
 #timer {
     user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: .4s;
+}
+
+.answerCorrect {
+    color: green;
+}
+
+.answerIncorrect {
+    color: red;
 }
 
 #header {
@@ -78,18 +90,22 @@ body {
 }
 
 .timerInd {
-    animation-duration: 1.5s;
-    position: fixed;
+    animation-duration: 2s;
     animation-name: fadeUp;
     animation-fill-mode: forwards;
+    position: absolute;
 }
 
 @keyframes fadeUp {
     from {
+        color: inherit;
+        margin-bottom: 0;
         opacity: 100%;
     }
 
     to {
+        color: green;
+        margin-bottom: 5vh;
         opacity: 0%;
     }
 }
