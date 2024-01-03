@@ -5,16 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
-  <script type="text/javascript" src="../js/leaderboard.js" defer></script>
+  <!--<script type="text/javascript" src="../js/leaderboard.js" defer></script>
+    <script type="text/javascript" src="../js/test-database.js"></script>-->
   <script type="text/javascript" src="../js/popup.js" defer></script>
-  <script type="text/javascript" src="../js/test-database.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
   <link rel="stylesheet" href="../css/leaderboard-style.css">
   <link rel="stylesheet" href="../css/main-style.css">
   <script src="https://kit.fontawesome.com/dab72a6e8d.js" crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-  <script type="text/javascript" src="../js/db-brain.js" defer></script>
 </head>
 
 <body>
@@ -40,9 +38,12 @@
   <div id="mainContentCont">
     <h1>Leaderboard!</h1>
     <!--Playerlist-->
-    <div id="playerList">
+    <!--<div id="playerList">
 
-    </div>
+    </div>-->
+    <ul id="playerList">
+
+    </ul>
     <!--Controls for the leaderboard-->
     <div id="leaderboardControlsCont">
       <div>
@@ -135,8 +136,7 @@
           <option>Tarshish</option>
         </select>
       </div>
-      <button id="submitButton" onclick="populatePlayerList()">Submit score&nbsp;<i
-          class="fa-solid fa-arrow-up"></i></button>
+      <button id="submitButton">Submit score&nbsp;<i class="fa-solid fa-arrow-up"></i></button>
     </div>
     <a href="./gameplay.html"><button>Go back</button></a>
     <!--This is for the YSA activities-->
@@ -146,6 +146,78 @@
       <div class="ysaActivity" id="church">Church</div>
     </div>
   </div>
+
+  <!--Firebase Code!-->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+    import { doc, setDoc, getFirestore, getDoc, query, collection, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyC4WuV4Pco4xOZ7TN4ZUZW7MyO40pph5Z4",
+      authDomain: "bible-trivia-web.firebaseapp.com",
+      projectId: "bible-trivia-web",
+      storageBucket: "bible-trivia-web.appspot.com",
+      messagingSenderId: "510142740882",
+      appId: "1:510142740882:web:ec1ea5ddb63a8e7096694b",
+      measurementId: "G-LTPMQ0JNXV"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    const db = getFirestore(app);
+
+    /*const docRef = doc(db, 'players', '1XCdz2zONa5cLXoip2DA')*/
+    var docSnap = await getDocs(query(collection(db, 'players')))
+
+    document.getElementById('submitButton').addEventListener('click', () => { submitName() })
+
+    docSnap.forEach((doc) => {
+      renderLeaderboard(doc);
+    });
+
+    function renderLeaderboard(doc) {
+      let li = document.createElement('li')
+      let name = document.createElement('span')
+      let score = document.createElement('span')
+
+      name.textContent = doc.data().name
+      score.textContent = doc.data().score
+
+      li.appendChild(name)
+      li.appendChild(score)
+
+      document.getElementById('playerList').appendChild(li)
+    }
+
+    async function submitName() {
+      let player = {
+        name: `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`,
+        score: sessionStorage.getItem('score')
+      }
+
+      addDoc(collection(db, 'players'), player)
+
+      while(document.getElementById('playerList').hasChildNodes()) {
+        document.getElementById('playerList').removeChild(document.getElementById('playerList').firstChild)
+      }
+
+      docSnap = await getDocs(query(collection(db, 'players')))
+      docSnap.forEach(doc => {
+        renderLeaderboard(doc)
+      });
+    }
+
+  </script>
+
+  <!--<script src="../js/db-brain.js" defer></script>-->
 </body>
 
 </html>
