@@ -41,9 +41,9 @@
     <!--<div id="playerList">
 
     </div>-->
-    <ul id="playerList">
+    <div id="playerList">
 
-    </ul>
+    </div>
     <!--Controls for the leaderboard-->
     <div id="leaderboardControlsCont">
       <div>
@@ -184,17 +184,21 @@
     });
 
     function renderLeaderboard(doc) {
-      let li = document.createElement('li')
+      let playerDiv = document.createElement('div')
+
+      playerDiv.setAttribute('class', 'player')
+      if (doc.data().name == `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`) playerDiv.setAttribute('id', 'newPlayer')
+
       let name = document.createElement('span')
       let score = document.createElement('span')
 
       name.textContent = doc.data().name
       score.textContent = doc.data().score
 
-      li.appendChild(name)
-      li.appendChild(score)
+      playerDiv.appendChild(name)
+      playerDiv.appendChild(score)
 
-      document.getElementById('playerList').appendChild(li)
+      document.getElementById('playerList').appendChild(playerDiv)
     }
 
     async function submitName() {
@@ -205,7 +209,7 @@
 
       addDoc(collection(db, 'players'), player)
 
-      while(document.getElementById('playerList').hasChildNodes()) {
+      while (document.getElementById('playerList').hasChildNodes()) {
         document.getElementById('playerList').removeChild(document.getElementById('playerList').firstChild)
       }
 
@@ -213,6 +217,8 @@
       docSnap.forEach(doc => {
         renderLeaderboard(doc)
       });
+
+      window.location.href = "#newPlayer"
     }
 
   </script>
