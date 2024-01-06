@@ -130,3 +130,13 @@ body {
     display: inline-block;
     transform: rotateX(180deg);
 }
+
+@media only screen and (min-width: 700px) {
+    .answer-button {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1.3em;
+    }
+}

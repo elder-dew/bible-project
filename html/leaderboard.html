@@ -37,11 +37,8 @@
   </div>
   <div id="mainContentCont">
     <h1>Leaderboard!</h1>
-    <!--Playerlist-->
-    <!--<div id="playerList">
-
-    </div>-->
     <div id="playerList">
+      <!--<span>Hmm... seems like the leaderboard isn't working.<br>Try refreshing :\</span>-->
 
     </div>
     <!--Controls for the leaderboard-->
@@ -180,6 +177,7 @@
     document.getElementById('deleteDb').addEventListener('click', () => { clearDB() })
 
     /*const docRef = doc(db, 'players', '1XCdz2zONa5cLXoip2DA')*/
+
     var docSnap = await getDocs(query(collection(db, 'players')))
 
     try {
@@ -188,6 +186,8 @@
     catch (TypeError) { /*I just wanted to make sure it didn't cause problems*/ }
 
     var dbData = []
+
+    
 
     docSnap.forEach((doc) => {
       dbData.push(doc.data())
@@ -212,7 +212,7 @@
     }
 
     async function submitName() {
-      if(document.getElementById('nameDropdown').value == '' || document.getElementById('placeDropdown').value == '') return;
+      if (document.getElementById('nameDropdown').value == '' || document.getElementById('placeDropdown').value == '') return;
       let player = {
         name: `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`,
         score: sessionStorage.getItem('score')

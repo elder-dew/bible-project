@@ -11,8 +11,15 @@ button {
     color: #39393A;
     font-family: 'Bebas Neue';
     font-size: 1.2em;
+    padding: 5px;
 }
 
 select {
     font-family: 'Acme';
+}
+
+@media only screen and (min-width: 700px) {
+    button {
+        font-size: 1.3em;
+    }
 }

@@ -140,4 +140,10 @@ body {
     .ysaActivity {
         height: 80px;
     }
+
+    #playerList {
+        width: 420px;
+        height: 30%;
+        margin-bottom: 8px;
+    }
 }
