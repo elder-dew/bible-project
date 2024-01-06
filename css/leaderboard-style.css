@@ -40,6 +40,21 @@ body {
     width: 100%;
 }
 
+.player#newPlayer {
+    animation-name: new-player;
+    animation-duration: 2s;
+}
+
+@keyframes new-player {
+    from {
+        background-color: #7EBDC2;
+    }
+
+    to {
+        background-color: #BB4430;
+    }
+}
+
 
 /*YSA Activity Stuff*/
 #activitiesCont {

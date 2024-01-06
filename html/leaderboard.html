@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
-  <!--<script type="text/javascript" src="../js/leaderboard.js" defer></script>
-    <script type="text/javascript" src="../js/test-database.js"></script>-->
+  <script type="text/javascript" src="../js/leaderboard.js" defer></script>
+  <!--<script type="text/javascript" src="../js/test-database.js"></script>-->
   <script type="text/javascript" src="../js/popup.js" defer></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
@@ -48,6 +48,7 @@
     <div id="leaderboardControlsCont">
       <div>
         <select name="Name" id="nameDropdown">
+          <option diabled selected value>Name</option>
           <option>Adam</option>
           <option>Eve</option>
           <option>Noah</option>
@@ -91,6 +92,7 @@
         </select>
         <span>of</span>
         <select name="Place" id="placeDropdown">
+          <option diabled selected value>Place</option>
           <option>Bethlehem</option>
           <option>Jerusalem</option>
           <option>Nazareth</option>
@@ -180,25 +182,37 @@
     /*const docRef = doc(db, 'players', '1XCdz2zONa5cLXoip2DA')*/
     var docSnap = await getDocs(query(collection(db, 'players')))
 
-    document.getElementById('submitButton').addEventListener('click', () => { submitName() })
+    try {
+      document.getElementById('submitButton').addEventListener('click', () => { submitName() })
+    }
+    catch (TypeError) { /*I just wanted to make sure it didn't cause problems*/ }
+
+    var dbData = []
 
     docSnap.forEach((doc) => {
-      renderLeaderboard(doc);
+      dbData.push(doc.data())
     });
+
+    dbData.sort((a, b) => { return b.score - a.score })
+
+    dbData.forEach((doc) => {
+      renderLeaderboard(doc);
+    })
 
     function renderLeaderboard(doc) {
       let playerDiv = document.createElement('div')
 
       playerDiv.setAttribute('class', 'player')
-      if (doc.data().name == `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`) playerDiv.setAttribute('id', 'newPlayer')
+      if (doc.name == `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`) playerDiv.setAttribute('id', 'newPlayer')
 
       let name = document.createElement('span')
-      name.textContent = `${doc.data().name}: ${doc.data().score}`
+      name.textContent = `${doc.name}: ${doc.score}`
       playerDiv.appendChild(name)
       document.getElementById('playerList').appendChild(playerDiv)
     }
 
     async function submitName() {
+      if(document.getElementById('nameDropdown').value == '' || document.getElementById('placeDropdown').value == '') return;
       let player = {
         name: `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`,
         score: sessionStorage.getItem('score')
@@ -211,10 +225,18 @@
       }
 
       docSnap = await getDocs(query(collection(db, 'players')))
-      docSnap.forEach(doc => {
-        renderLeaderboard(doc)
+      dbData = []
+      docSnap.forEach((doc) => {
+        dbData.push(doc.data())
       });
 
+      dbData.sort((a, b) => { return b.score - a.score })
+
+      dbData.forEach((doc) => {
+        renderLeaderboard(doc);
+      })
+      sessionStorage.removeItem('score')
+      document.getElementById('submitButton').remove()
       window.location.href = "#newPlayer"
     }
 

@@ -1,4 +1,4 @@
-var playerList = document.querySelector("#playerList");
+/*var playerList = document.querySelector("#playerList");
 var playerName = document.getElementById("nameDropdown");
 var playerPlace = document.getElementById("placeDropdown");
 var playerScore = sessionStorage.getItem('score');
@@ -35,8 +35,12 @@ function populatePlayerList() {
     });
     // Scroll to new player
     window.location.href = "#newPlayer"
-    /*playerList.innerHTML += `<div class='player' id='newPlayer'>${playerName.value} of ${playerPlace.value}: ${playerScore}</div>`;
-    window.location.href = '#newPlayer';*/
+    playerList.innerHTML += `<div class='player' id='newPlayer'>${playerName.value} of ${playerPlace.value}: ${playerScore}</div>`;
+    window.location.href = '#newPlayer';
     leaderBoardCont.remove();
     sessionStorage.removeItem('score');
-}
+}*/
+var submitButton = document.getElementById('submitButton')
+
+console.log(sessionStorage.getItem('score'))
+window.onload = () => { if (sessionStorage.getItem('score') == null) submitButton.remove() }
