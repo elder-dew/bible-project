@@ -40,7 +40,7 @@ function populatePlayerList() {
     leaderBoardCont.remove();
     sessionStorage.removeItem('score');
 }*/
-var submitButton = document.getElementById('submitButton')
+var leaderboardControls = document.getElementById('leaderboardControlsCont')
 
 console.log(sessionStorage.getItem('score'))
-window.onload = () => { if (sessionStorage.getItem('score') == null) submitButton.remove() }
+window.onload = () => { if (sessionStorage.getItem('score') == null) leaderboardControls.remove() }

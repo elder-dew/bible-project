@@ -51,7 +51,8 @@
           students to strengthen their commitment to Jesus Christ and conduct a comprehensive study of the scriptures
           and words of modern-day prophets. Institute students may find guidance and direction from the Holy Ghost.
           This guidance can help them make important life decisions as students learn together and strengthen one
-          another." (<a href="https://www.churchofjesuschrist.org/si/institute/about/faq/" target="_blank">More here</a>)</p>
+          another." (<a href="https://www.churchofjesuschrist.org/si/institute/about/faq/" target="_blank">More
+            here</a>)</p>
         <button onclick="ClosePopup(this.parentElement.parentElement)">Close</button>
       </div>
     </div>
@@ -214,6 +215,7 @@
 
     try {
       document.getElementById('submitButton').addEventListener('click', () => { submitName() })
+      var controls = document.getElementById('leaderboardControlsCont');
     }
     catch (TypeError) { /*I just wanted to make sure it didn't cause problems*/ }
 
@@ -235,7 +237,10 @@
       let playerDiv = document.createElement('div')
 
       playerDiv.setAttribute('class', 'player')
-      if (doc.name == `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`) playerDiv.setAttribute('id', 'newPlayer')
+
+      if (controls != null) {
+        if (doc.name == `${document.getElementById('nameDropdown').value} of ${document.getElementById('placeDropdown').value}`) playerDiv.setAttribute('id', 'newPlayer')
+      }
 
       let name = document.createElement('span')
       name.textContent = `${doc.name}: ${doc.score}`
@@ -268,7 +273,7 @@
         renderLeaderboard(doc);
       })
       sessionStorage.removeItem('score')
-      document.getElementById('submitButton').remove()
+      document.getElementById('leaderboardControlsCont').remove()
       window.location.href = "#newPlayer"
     }
 
