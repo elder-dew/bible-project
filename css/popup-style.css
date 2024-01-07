@@ -1,0 +1,107 @@
+/*YSA Activity Stuff*/
+#activitiesCont {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ysaActivity {
+    height: 60px;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 3px 3px 20px black;
+    /*-1px -1px black,
+    1px 1px black,
+    1px -1px black,
+    -1px 1px black;*/
+    font-size: larger;
+    user-select: none;
+}
+
+#familyHistory {
+    background-image: url('../images/tree-branches.jpg');
+    background-size: cover;
+}
+
+#institute {
+    background-image: url('../images/scriptures.jpg');
+    background-size: cover;
+}
+
+#church {
+    background-image: url('../images/church.jpg');
+    background-size: cover;
+    background-position: 50%;
+}
+
+#popupCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.418);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+    transition: .15s;
+    color: black;
+    /* Stretch across the page */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.popupBody {
+    background-color: #FFFDD0;
+    height: 80vh;
+    width: 80vw;
+    padding: 15px;
+    font-size: large;
+    font-family: Noto Serif;
+    overflow-y: scroll;
+}
+
+.header {
+    font-family: Acme;
+    margin: -15px;
+    color: white;
+    user-select: none;
+
+    h1 {
+        margin-top: 0;
+        padding: 15px;
+    }
+}
+
+/*.popupBody p {
+    padding: 12px;
+    background-color: white;
+}*/
+
+.popup.open {
+    z-index: 2;
+    opacity: 100;
+}
+
+@media only screen and (min-width: 700px) {
+    #activitiesCont {
+        flex-direction: row;
+        column-gap: 10px;
+    }
+
+    .ysaActivity {
+        height: 80px;
+    }
+}

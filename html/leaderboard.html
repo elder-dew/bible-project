@@ -10,8 +10,10 @@
   <script type="text/javascript" src="../js/popup.js" defer></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif">
   <link rel="stylesheet" href="../css/leaderboard-style.css">
   <link rel="stylesheet" href="../css/main-style.css">
+  <link rel="stylesheet" href="../css/popup-style.css">
   <script src="https://kit.fontawesome.com/dab72a6e8d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,20 +21,50 @@
   <div id="popupCont">
     <!--Family History Popup-->
     <div id="familyHistoryPopup" class="popup">
-      <p class="popupText">Family History class is Wednesdays at 7:30pm</p>
-      <button onclick="ClosePopup(this.parentElement)">Close</button>
+      <div class="popupBody">
+        <div class="header" style="background-image: url(../images/tree-branches.jpg);">
+          <h1>Family History Class</h1>
+        </div>
+        <h3>Why do Family History?</h3>
+        <p>Where did I come from? Have you ever wondered that? It's about so much more than just what country our
+          ancestors migrated from. It's about who you are, who they were, and who your children and their children's
+          children will become. Family history is so important in God's work of bringing families together. That is why
+          we have started a family history class: to help unite all of God's family. <b>Our class is on Wednesdays at
+            7:30
+            at 1503 E Colorado Blvd, Pasadena, CA 91106</b></p>
+        <p>If you have any questions, please reach out at [info]</p>
+        <button onclick="ClosePopup(this.parentElement.parentElement)">Close</button>
+      </div>
     </div>
 
     <!--Institute Popup-->
     <div id="institutePopup" class="popup">
-      <p class="popupText">Institute is Tuesday at 7</p>
-      <button onclick="ClosePopup(this.parentElement)">Close</button>
+      <div class="popupBody">
+        <div class="header" style="background-image: url(../images/scriptures.jpg);">
+          <h1>Institute</h1>
+        </div>
+        <h3>Why come to Institute?</h3>
+        <p>The Church of Jesus Christ of Latter-day Saints has stated:</p>
+        <p>"The institutes of religion program of The Church of Jesus Christ of Latter-day Saints provides religious
+          education for young adults ages 18 to 30. With a worldwide enrollment of more than 350,000 students in
+          almost 2,700 locations, there is an institute of religion near you. Institute provides an opportunity for
+          students to strengthen their commitment to Jesus Christ and conduct a comprehensive study of the scriptures
+          and words of modern-day prophets. Institute students may find guidance and direction from the Holy Ghost.
+          This guidance can help them make important life decisions as students learn together and strengthen one
+          another." (<a href="https://www.churchofjesuschrist.org/si/institute/about/faq/" target="_blank">More here</a>)</p>
+        <button onclick="ClosePopup(this.parentElement.parentElement)">Close</button>
+      </div>
     </div>
 
     <!--Church Popup-->
     <div id="churchPopup" class="popup">
-      <p class="popupText">Church is Sunday at 12</p>
-      <button onclick="ClosePopup(this.parentElement)">Close</button>
+      <div class="popupBody">
+        <div class="header" style="background-image: url(../images/church.jpg);">
+          <h1>Attend Church</h1>
+        </div>
+
+        <button onclick="ClosePopup(this.parentElement.parentElement)">Close</button>
+      </div>
     </div>
   </div>
   <div id="mainContentCont">
@@ -187,7 +219,7 @@
 
     var dbData = []
 
-    
+
 
     docSnap.forEach((doc) => {
       dbData.push(doc.data())
