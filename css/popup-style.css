@@ -27,11 +27,11 @@
     font-size: larger;
     user-select: none;
     background-size: cover;
-    text-shadow: 
-    1px 1px 0 black,
-    -1px 1px 0 black,
-    1px -1px 0 black,
-    -1px -1px 0 black;
+    text-shadow:
+        1px 1px 0 black,
+        -1px 1px 0 black,
+        1px -1px 0 black,
+        -1px -1px 0 black;
 }
 
 #familyHistory {
@@ -82,7 +82,14 @@
     padding: 15px;
     font-size: large;
     font-family: Noto Serif;
-    overflow-y: scroll;
+
+    .scrollCont {
+        overflow-y: scroll;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
     display: flex;
     flex-direction: column;
 }
@@ -92,6 +99,7 @@
     margin: -15px;
     color: white;
     user-select: none;
+    z-index: 1;
 
     h1 {
         margin: 0;
