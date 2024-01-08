@@ -67,7 +67,7 @@ function StartTimer() {
     var timeLeft = (gameTime - Math.floor((Date.now() - startTime) / 1000));
     if (timeLeft <= 0) {
       sessionStorage.setItem('score', score);
-      window.location.href = './leaderboard.html'
+      window.location.href = './html/leaderboard.html'
     }
     timerObj.innerHTML = `Time: ${timeLeft}`;
   }, 100);
