@@ -4,6 +4,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 0;
+    }
 }
 
 .ysaActivity {
@@ -21,22 +26,29 @@
     -1px 1px black;*/
     font-size: larger;
     user-select: none;
+    background-size: cover;
+    text-shadow: 
+    1px 1px 0 black,
+    -1px 1px 0 black,
+    1px -1px 0 black,
+    -1px -1px 0 black;
 }
 
 #familyHistory {
     background-image: url('../images/tree-branches.jpg');
-    background-size: cover;
 }
 
 #institute {
-    background-image: url('../images/scriptures.jpg');
-    background-size: cover;
+    background-image: url('../images/bricks.jpg');
 }
 
 #church {
     background-image: url('../images/church.jpg');
-    background-size: cover;
     background-position: 50%;
+}
+
+#missionary {
+    background-image: url('../images/scriptures.jpg');
 }
 
 #popupCont {

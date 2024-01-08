@@ -42,5 +42,4 @@ function populatePlayerList() {
 }*/
 var leaderboardControls = document.getElementById('leaderboardControlsCont')
 
-console.log(sessionStorage.getItem('score'))
 window.onload = () => { if (sessionStorage.getItem('score') == null) leaderboardControls.remove() }
