@@ -8,7 +8,13 @@
     h3 {
         text-align: center;
         margin-bottom: 0;
+        flex-basis: 100;
     }
+}
+
+#activityRow {
+    display: flex;
+    flex-direction: column;
 }
 
 .ysaActivity {
@@ -32,6 +38,7 @@
         -1px 1px 0 black,
         1px -1px 0 black,
         -1px -1px 0 black;
+        text-align: center;
 }
 
 #familyHistory {
@@ -118,9 +125,9 @@
 }
 
 @media only screen and (min-width: 700px) {
-    #activitiesCont {
-        flex-direction: row;
+    #activityRow {
         column-gap: 10px;
+        flex-direction: row;
     }
 
     .ysaActivity {
