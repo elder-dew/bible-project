@@ -309,7 +309,6 @@
         await setDoc(doc(db, 'players', player.name), player)
       }
       catch {
-        console.log('It did not work...')
         let nameInstruct = document.getElementById('nameInstruct')
         nameInstruct.style.color = 'red'
         nameInstruct.innerHTML = 'Please choose another name'
