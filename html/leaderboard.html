@@ -34,7 +34,12 @@
             we have started a family history class: to help unite all of God's family. Our class is on <b>Wednesdays at
               7:30
               at 1503 E Colorado Blvd, Pasadena, CA 91106</b></p>
-          <p>If you have any questions, please reach out at [info]</p>
+          <p>If you have any questions, please reach out at <a
+              href="mailto:9413926@missionary.org">9413926@missionary.org</a></p>
+          <h3>How do I do Family History?</h3>
+          <p>Discovering your family history is made easy with FamilySearch.org. Sign up, build your family tree, and
+            explore a vast collection of historical records. Connect with relatives, share insights, and actively
+            participate in preserving your family's legacy.</p>
         </div>
         <button onclick="ClosePopup(this.parentElement.parentElement)">Close</button>
       </div>
@@ -71,6 +76,20 @@
           <h1>Attend Church</h1>
         </div>
         <div class="scrollCont">
+          <h3>Why attend church?</h3>
+          <p>Church is a great place for people to connect with their Heavenly Father personally, and the faith
+            community on a larger scale. </p>
+          <h3>What is church like?</h3>
+          <p>In a typical church meeting we will:</p>
+          <ul>
+            <li>Begin with a song and prayer</li>
+            <li>Partake of the Sacrament (Communion)</li>
+            <li>Speakers from the congregation will give short sermons (or, talks)</li>
+            <li>End with a song and prayer</li>
+          </ul>
+          <p>Because Jesus Christ is the light, the life, and the hope of the world, all church services are focused on
+            Him, and how we can draw closer to him as disciples. None of us are perfect, but we are all seeking a deeper
+            relationship with our Savior.</p>
         </div>
         <button onclick="ClosePopup(this.parentElement.parentElement)">Close</button>
       </div>
@@ -132,86 +151,87 @@
     <div id="leaderboardControlsCont">
       <div>
         <p id="nameInstruct">Create your name:</p>
-        <select name="Name" id="nameDropdown">
-          <option diabled selected value>Name</option>
-          <option>Chede</option>
-          <option>Adam</option>
-          <option>Eve</option>
-          <option>Noah</option>
-          <option>Abraham</option>
-          <option>Sarah</option>
-          <option>Isaac</option>
-          <option>Rebekah</option>
-          <option>Jacob</option>
-          <option>Joseph</option>
-          <option>Moses</option>
-          <option>Miriam</option>
-          <option>Aaron</option>
-          <option>Ruth</option>
-          <option>David</option>
-          <option>Solomon</option>
-          <option>Elijah</option>
-          <option>Esther</option>
-          <option>Isaiah</option>
-          <option>Mary</option>
-          <option>John</option>
-          <option>Peter</option>
-          <option>Paul</option>
-          <option>Andrew</option>
-          <option>Philip</option>
-          <option>Thomas</option>
-          <option>Matthew</option>
-          <option>Simon</option>
-          <option>Thaddeus</option>
-          <option>Bartholomew</option>
-          <option>Matthias</option>
-          <option>Timothy</option>
-          <option>Titus</option>
-          <option>Philemon</option>
-          <option>Priscilla</option>
-          <option>Aquila</option>
-          <option>Lydia</option>
-          <option>Phoebe</option>
-        </select>
-        <span>of</span>
-        <select name="Place" id="placeDropdown">
-          <option diabled selected value>Place</option>
-          <option>Bethlehem</option>
-          <option>Jerusalem</option>
-          <option>Nazareth</option>
-          <option>Capernaum</option>
-          <option>Galilee</option>
-          <option>Gethsemane</option>
-          <option>Ephesus</option>
-          <option>Corinth</option>
-          <option>Thessalonica</option>
-          <option>Antioch</option>
-          <option>Jericho</option>
-          <option>Canaan</option>
-          <option>Samaria</option>
-          <option>Damascus</option>
-          <option>Shiloh</option>
-          <option>Bethel</option>
-          <option>Eden</option>
-          <option>Sinai</option>
-          <option>Jordan</option>
-          <option>Tiberias</option>
-          <option>Moriah</option>
-          <option>Zion</option>
-          <option>Hebron</option>
-          <option>Joppa</option>
-          <option>Ararat</option>
-          <option>Nineveh</option>
-          <option>Beersheba</option>
-          <option>Bethany</option>
-          <option>Bethsaida</option>
-          <option>Dan</option>
-          <option>Gerizim</option>
-          <option>Mamre</option>
-          <option>Shechem</option>
-          <option>Tabgha</option>
-          <option>Tarshish</option>
-        </select>
+        <div id="selectBox">
+          <select name="Name" id="nameDropdown">
+            <option diabled selected value>Name</option>
+            <option>Chede</option>
+            <option>Adam</option>
+            <option>Eve</option>
+            <option>Noah</option>
+            <option>Abraham</option>
+            <option>Sarah</option>
+            <option>Isaac</option>
+            <option>Rebekah</option>
+            <option>Jacob</option>
+            <option>Joseph</option>
+            <option>Moses</option>
+            <option>Miriam</option>
+            <option>Aaron</option>
+            <option>Ruth</option>
+            <option>David</option>
+            <option>Solomon</option>
+            <option>Elijah</option>
+            <option>Esther</option>
+            <option>Isaiah</option>
+            <option>Mary</option>
+            <option>John</option>
+            <option>Peter</option>
+            <option>Paul</option>
+            <option>Andrew</option>
+            <option>Philip</option>
+            <option>Thomas</option>
+            <option>Matthew</option>
+            <option>Simon</option>
+            <option>Thaddeus</option>
+            <option>Bartholomew</option>
+            <option>Matthias</option>
+            <option>Timothy</option>
+            <option>Titus</option>
+            <option>Philemon</option>
+            <option>Priscilla</option>
+            <option>Aquila</option>
+            <option>Lydia</option>
+            <option>Phoebe</option>
+          </select>
+          <span>of</span>
+          <select name="Place" id="placeDropdown">
+            <option diabled selected value>Place</option>
+            <option>Bethlehem</option>
+            <option>Jerusalem</option>
+            <option>Nazareth</option>
+            <option>Capernaum</option>
+            <option>Galilee</option>
+            <option>Ephesus</option>
+            <option>Corinth</option>
+            <option>Thessalonica</option>
+            <option>Antioch</option>
+            <option>Jericho</option>
+            <option>Canaan</option>
+            <option>Samaria</option>
+            <option>Damascus</option>
+            <option>Shiloh</option>
+            <option>Bethel</option>
+            <option>Eden</option>
+            <option>Sinai</option>
+            <option>Jordan</option>
+            <option>Tiberias</option>
+            <option>Moriah</option>
+            <option>Zion</option>
+            <option>Hebron</option>
+            <option>Joppa</option>
+            <option>Ararat</option>
+            <option>Nineveh</option>
+            <option>Beersheba</option>
+            <option>Bethany</option>
+            <option>Bethsaida</option>
+            <option>Dan</option>
+            <option>Gerizim</option>
+            <option>Mamre</option>
+            <option>Shechem</option>
+            <option>Tabgha</option>
+            <option>Tarshish</option>
+          </select>
+        </div>
       </div>
       <button id="submitButton">Submit score&nbsp;<i class="fa-solid fa-arrow-up"></i></button>
     </div>
@@ -258,9 +278,9 @@
     const db = getFirestore(app);
 
     try {
-    document.getElementById('deleteDb').addEventListener('click', () => { clearDB() })
+      document.getElementById('deleteDb').addEventListener('click', () => { clearDB() })
     }
-    catch {}
+    catch { }
 
     /*const docRef = doc(db, 'players', '1XCdz2zONa5cLXoip2DA')*/
 

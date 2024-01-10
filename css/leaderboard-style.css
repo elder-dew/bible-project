@@ -20,6 +20,21 @@ body {
     gap: 5px;
 }
 
+#selectBox {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding: 0px 20px;
+    select {
+        flex-grow: 1;
+    }
+    span {
+        flex-grow: 1;
+        text-align: center;
+        vertical-align: center;
+    }
+}
+
 #backButton {
     width: 80vw;
 }
