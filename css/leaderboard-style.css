@@ -20,6 +20,10 @@ body {
     gap: 5px;
 }
 
+#backButton {
+    width: 80vw;
+}
+
 #playerList {
     display: flex;
     scroll-behavior: smooth;
@@ -64,5 +68,11 @@ body {
         width: 420px;
         height: 30%;
         margin-bottom: 8px;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    #backButton {
+        width: 360px;
     }
 }

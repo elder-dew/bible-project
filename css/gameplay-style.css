@@ -18,15 +18,21 @@ body {
     text-align: center;
 }
 
+#playButton {
+    width: 80%;
+}
+
 #startScreen div {
     display: flex;
     justify-content: inherit;
     align-items: inherit;
     flex-direction: inherit;
 
-    height: 80vh;
+    max-height: 80vh;
     width: 90vw;
     background-color: white;
+    padding: 10px 8%;
+    background: linear-gradient(to right, transparent, 10%, white, 90%, transparent);
 }
 
 #main-game {
@@ -138,5 +144,15 @@ body {
 
     button {
         font-size: 1.3em;
+    }
+
+    #startScreen div {
+        width: 700px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #playButton {
+        width: 360px;
     }
 }

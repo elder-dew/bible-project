@@ -38,7 +38,7 @@
         -1px 1px 0 black,
         1px -1px 0 black,
         -1px -1px 0 black;
-        text-align: center;
+    text-align: center;
 }
 
 #familyHistory {
@@ -132,6 +132,12 @@
 
     .ysaActivity {
         height: 80px;
+    }
+}
+
+@media only screen and (max-height: 688px) {
+    .ysaActivity {
+        height: 40px;
     }
 }
 
