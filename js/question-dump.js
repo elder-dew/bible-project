@@ -611,7 +611,7 @@ const bibleTriviaQuestions = [
   },
   {
     "question": "Who had an invisible army of horses and chariots of fire?",
-    "options": ["Ahab", "Jehoram", "Jehu", "Ahaziah"],
+    "options": ["Ahab", "Jehoram", "Elisha", "Ahaziah"],
     "answer": "Elisha"
   },
   {
