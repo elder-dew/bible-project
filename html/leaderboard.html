@@ -131,8 +131,10 @@
     <!--Controls for the leaderboard-->
     <div id="leaderboardControlsCont">
       <div>
+        <p id="nameInstruct" class="epicText">Create your name:</p>
         <select name="Name" id="nameDropdown">
           <option diabled selected value>Name</option>
+          <option>Chede</option>
           <option>Adam</option>
           <option>Eve</option>
           <option>Noah</option>
@@ -217,7 +219,8 @@
     <a href="../index.html"><button>Go back</button></a>
     <!--This is for the YSA activities-->
     <div id="activitiesCont">
-      <h2 class="activityHeading"><i class="fa-solid fa-arrow-down"></i>&nbsp;Click to learn more about&nbsp;<i class="fa-solid fa-arrow-down"></i></h2>
+      <h2 class="activityHeading"><i class="fa-solid fa-arrow-down"></i>&nbsp;Click to learn more about&nbsp;<i
+          class="fa-solid fa-arrow-down"></i></h2>
       <div id="activityRow">
         <div class="ysaActivity" id="familyHistory">Family History!</div>
         <div class="ysaActivity" id="institute">Institute!</div>
@@ -302,13 +305,23 @@
         score: sessionStorage.getItem('score')
       }
 
-      addDoc(collection(db, 'players'), player)
+      try {
+        await setDoc(doc(db, 'players', player.name), player)
+      }
+      catch {
+        console.log('It did not work...')
+        let nameInstruct = document.getElementById('nameInstruct')
+        nameInstruct.style.color = 'red'
+        nameInstruct.innerHTML = 'Please choose another name'
+        return;
+      }
 
       while (document.getElementById('playerList').hasChildNodes()) {
         document.getElementById('playerList').removeChild(document.getElementById('playerList').firstChild)
       }
 
       docSnap = await getDocs(query(collection(db, 'players')))
+
       dbData = []
       docSnap.forEach((doc) => {
         dbData.push(doc.data())

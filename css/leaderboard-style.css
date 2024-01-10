@@ -32,6 +32,10 @@ body {
     margin-bottom: 8px;
 }
 
+#nameInstruct {
+    text-align: center;
+}
+
 .player {
     padding: 6%;
     background-color: #BB4430;
