@@ -41,5 +41,13 @@ function populatePlayerList() {
     sessionStorage.removeItem('score');
 }*/
 var leaderboardControls = document.getElementById('leaderboardControlsCont')
+var scoreP = document.getElementById('scoreP')
 
-window.onload = () => { if (sessionStorage.getItem('score') == null) leaderboardControls.remove() }
+window.onload = () => {
+    if (sessionStorage.getItem('score') == null) {
+        leaderboardControls.remove()
+    }
+    else {
+        scoreP.innerHTML = `Your score was: ${sessionStorage.getItem('score')}`
+    }
+}
