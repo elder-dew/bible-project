@@ -20,6 +20,10 @@ body {
     gap: 5px;
 }
 
+#submitButton {
+    margin-bottom: 9px;
+}
+
 /*#selectBox {
     display: flex;
     flex-direction: row;
@@ -35,7 +39,7 @@ body {
     }
 }*/
 
-#backButton {
+#backButton, #submitButton {
     width: 80vw;
 }
 
@@ -87,7 +91,7 @@ body {
 }
 
 @media only screen and (min-width: 450px) {
-    #backButton {
+    #backButton, #submitButton {
         width: 360px;
     }
 }
