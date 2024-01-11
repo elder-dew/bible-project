@@ -758,5 +758,75 @@ const bibleTriviaQuestions = [
     "question": "What precious material is described as the street material in the New Jerusalem in Revelation?",
     "options": ["Gold", "Silver", "Diamond", "Pearl"],
     "answer": "Gold"
+  },
+  {
+    "question": "Which of the following books is not one of the four Gospels?",
+    "options": ["Matthew", "Acts", "John", "Mark"],
+    "answer": "Acts"
+  },
+  {
+    "question": "In which New Testament book do we find the Sermon on the Mount?",
+    "options": ["Matthew", "Luke", "Mark", "John"],
+    "answer": "Matthew"
+  },
+  {
+    "question": "Which book is considered the Acts of the Apostles, detailing the early history of the Christian Church?",
+    "options": ["Romans", "Acts", "Ephesians", "Corinthians"],
+    "answer": "Acts"
+  },
+  {
+    "question": "Which letter was written by the apostle Paul to the Christians in Rome?",
+    "options": ["Romans", "Galatians", "Ephesians", "Philippians"],
+    "answer": "Romans"
+  },
+  {
+    "question": "Who is traditionally believed to be the author of the Book of Revelation?",
+    "options": ["Paul", "John", "Peter", "James"],
+    "answer": "John"
+  },
+  {
+    "question": "Which letter is addressed to a young pastor named Timothy?",
+    "options": ["Titus", "Philemon", "1 Timothy", "2 Corinthians"],
+    "answer": "1 Timothy"
+  },
+  {
+    "question": "In which book do we find the famous 'Love Chapter' that describes the characteristics of charity?",
+    "options": ["1 Corinthians", "Colossians", "1 John", "Ephesians"],
+    "answer": "1 Corinthians"
+  },
+  {
+    "question": "Which Gospel emphasizes Jesus as the fulfillment of Old Testament prophecies and the Messiah?",
+    "options": ["Matthew", "Mark", "Luke", "John"],
+    "answer": "Matthew"
+  },
+  {
+    "question": "The book of James is often considered a letter of:",
+    "options": ["Faith", "Hope", "Love", "Endurance"],
+    "answer": "Faith"
+  },
+  {
+    "question": "Which New Testament book contains the story of the Prodigal Son?",
+    "options": ["Luke", "John", "Mark", "Matthew"],
+    "answer": "Luke"
+  },
+  {
+    "question": "Where did David defeat Goliath in single combat?",
+    "options": ["Valley of Elah", "Valley of Achor", "Valley of Jezreel", "Valley of Megiddo"],
+    "answer": "Valley of Elah"
+  },
+  {
+    "question": "In which city did the apostle Paul deliver his famous sermon at the Areopagus?",
+    "options": ["Athens", "Corinth", "Rome", "Ephesus"],
+    "answer": "Athens"
+  },
+  {
+    "question": "At which well did Jesus meet the Samaritan woman and engage in a conversation with her?",
+    "options": ["Jacob's Well", "Isaac's Well", "Abraham's Well", "Eli's Well"],
+    "answer": "Jacob's Well"
+  },
+  {
+    "question": "Where was the garden where Jesus prayed before his arrest, commonly known as the Garden of Gethsemane?",
+    "options": ["Mount of Olives", "Mount Zion", "Mount Moriah", "Mount Sinai"],
+    "answer": "Mount of Olives"
   }
 ]
