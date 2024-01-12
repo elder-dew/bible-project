@@ -43,7 +43,11 @@ body {
     }
 }*/
 
-#backButton, #submitButton {
+#backButton {
+    width: 40vw;
+}
+
+#submitButton {
     width: 80vw;
 }
 
@@ -93,7 +97,10 @@ body {
 }
 
 @media only screen and (min-width: 450px) {
-    #backButton, #submitButton {
+    #backButton {
+        width: 180px;
+    }
+    #submitButton {
         width: 360px;
     }
 }
