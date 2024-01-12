@@ -735,11 +735,6 @@ const bibleTriviaQuestions = [
     "answer": "Rome"
   },
   {
-    "question": "In Revelation, what does the New Jerusalem symbolize?",
-    "options": ["Heaven", "Earth", "Hell", "Purgatory"],
-    "answer": "Heaven"
-  },
-  {
     "question": "According to Revelation, who is the archenemy of God and the embodiment of evil?",
     "options": ["Satan", "Antichrist", "Beast", "Dragon"],
     "answer": "Satan"
