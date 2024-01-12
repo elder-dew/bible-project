@@ -24,6 +24,10 @@ body {
     margin-bottom: 9px;
 }
 
+#scoreP {
+    margin-bottom: 0;
+}
+
 /*#selectBox {
     display: flex;
     flex-direction: row;

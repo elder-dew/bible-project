@@ -81,6 +81,7 @@ body {
     height: 80vw;
     gap: 2px;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 #scoreP {

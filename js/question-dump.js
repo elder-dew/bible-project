@@ -750,11 +750,6 @@ const bibleTriviaQuestions = [
     "answer": "Michael"
   },
   {
-    "question": "In Revelation, what is the symbolic meaning of the two witnesses who prophesy for 1,260 days?",
-    "options": ["Law and Grace", "Old and New Testaments", "Moses and Elijah", "Justice and Mercy"],
-    "answer": "Old and New Testaments"
-  },
-  {
     "question": "What precious material is described as the street material in the New Jerusalem in Revelation?",
     "options": ["Gold", "Silver", "Diamond", "Pearl"],
     "answer": "Gold"

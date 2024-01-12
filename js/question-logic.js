@@ -8,6 +8,7 @@ const pages = document.querySelectorAll(".page")
 var timerObj = document.getElementById('timer')
 var gameTime = 60;
 var timePenalty = 2;
+var usedQuestions = [];
 
 window.onload = nextQuestion();
 
@@ -21,8 +22,9 @@ function nextQuestion() {
   timerObj.classList = "null"
 
   questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1));
-  while (questionNum == currentQuestionIndex) { questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1)); }
-  console.log(questionNum)
+  while (questionNum == currentQuestionIndex || CheckQuestionUsed(questionNum)) { console.log('it tried to choose the same one'); questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1)); }
+
+  usedQuestions.push(questionNum)
   currentQuestionIndex = questionNum;
   var answerArray = bibleTriviaQuestions[questionNum].options;
   answerArray.sort(() => Math.random() - 0.5);
@@ -34,6 +36,15 @@ function nextQuestion() {
     buttons[i].innerHTML = `<span>${answerOption}</span>`;
     buttons[i].classList = "answer-button";
   }
+}
+
+function CheckQuestionUsed(questNum) {
+  for (let i = 0; i < usedQuestions.length; i++) {
+    const num = usedQuestions[i];
+
+    if (questNum == num) return true;
+  }
+  return false;
 }
 
 function checkAnswer(answerButton) {
