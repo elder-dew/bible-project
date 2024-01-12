@@ -22,7 +22,7 @@ function nextQuestion() {
   timerObj.classList = "null"
 
   questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1));
-  while (questionNum == currentQuestionIndex || CheckQuestionUsed(questionNum)) { console.log('it tried to choose the same one'); questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1)); }
+  while (questionNum == currentQuestionIndex || CheckQuestionUsed(questionNum)) { questionNum = Math.floor(Math.random() * (bibleTriviaQuestions.length - 1)); }
 
   usedQuestions.push(questionNum)
   currentQuestionIndex = questionNum;

@@ -210,12 +210,7 @@ const bibleTriviaQuestions = [
     "answer": "Golgotha"
   },
   {
-    "question": "Who was the first martyr mentioned in the Bible?",
-    "options": ["Stephen", "Abel", "Enoch", "Seth"],
-    "answer": "Abel"
-  },
-  {
-    "question": "What did Jesus use to feed the 5,000 people in the miracle of the loaves and fishes?",
+    "question": "What did Jesus use to feed the 5,000 people?",
     "options": ["Barley", "Wheat", "Fish", "Lamb"],
     "answer": "Fish"
   },
@@ -720,11 +715,6 @@ const bibleTriviaQuestions = [
     "answer": "Jephunneh"
   },
   {
-    "question": "What was the general response of the other ten spies? (Besided Caleb and Joshua)",
-    "options": ["Fearful", "Excited", "Confident", "Indifferent"],
-    "answer": "Fearful"
-  },
-  {
     "question": "In the book of Revelation, who wrote letters to the seven churches of Asia?",
     "options": ["John", "Peter", "Paul", "James"],
     "answer": "John"
@@ -738,11 +728,6 @@ const bibleTriviaQuestions = [
     "question": "According to Revelation, who is the archenemy of God and the embodiment of evil?",
     "options": ["Satan", "Antichrist", "Beast", "Dragon"],
     "answer": "Satan"
-  },
-  {
-    "question": "Which angel in Revelation is associated with sounding the trumpet judgments?",
-    "options": ["Michael", "Gabriel", "Raphael", "Uriel"],
-    "answer": "Michael"
   },
   {
     "question": "What precious material is described as the street material in the New Jerusalem in Revelation?",
