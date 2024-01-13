@@ -4,6 +4,10 @@ body {
     font-family: 'Acme';
 }
 
+body::selection {
+    background: #BCD979;
+}
+
 button {
     background-color: #BCD979;
     border: none;
