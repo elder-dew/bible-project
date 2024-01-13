@@ -25,11 +25,6 @@ const bibleTriviaQuestions = [
     "answer": "Jericho"
   },
   {
-    "question": "Who was the first king of Israel?",
-    "options": ["Saul", "David", "Solomon", "Samuel"],
-    "answer": "Saul"
-  },
-  {
     "question": "Which disciple famously doubted Jesus' resurrection until he saw the wounds?",
     "options": ["Thomas", "Andrew", "James", "Philip"],
     "answer": "Thomas"
@@ -38,11 +33,6 @@ const bibleTriviaQuestions = [
     "question": "Which woman was turned into a pillar of salt for looking back at Sodom?",
     "options": ["Ruth", "Sarah", "Lot's wife", "Hagar"],
     "answer": "Lot's wife"
-  },
-  {
-    "question": "What was the name of the river in which John the Baptist baptized people?",
-    "options": ["Jordan", "Nile", "Euphrates", "Tigris"],
-    "answer": "Jordan"
   },
   {
     "question": "What is the first book of the New Testament?",
@@ -80,11 +70,6 @@ const bibleTriviaQuestions = [
     "answer": "King Ahab"
   },
   {
-    "question": "What was the name of the disciple who replaced Judas Iscariot?",
-    "options": ["Matthias", "Barnabas", "Silas", "Timothy"],
-    "answer": "Matthias"
-  },
-  {
     "question": "Which Old Testament character is known for his patience despite facing severe trials?",
     "options": ["Job", "Abraham", "Moses", "Isaiah"],
     "answer": "Job"
@@ -98,11 +83,6 @@ const bibleTriviaQuestions = [
     "question": "Who was the father of John the Baptist?",
     "options": ["Zechariah", "Joachim", "Simeon", "Eli"],
     "answer": "Zechariah"
-  },
-  {
-    "question": "In the parable of the prodigal son, what did the younger son ask for in his share of the property?",
-    "options": ["Money", "Land", "Livestock", "Jewels"],
-    "answer": "Money"
   },
   {
     "question": "Which Old Testament figure is known for interpreting dreams in Egypt?",
@@ -130,11 +110,6 @@ const bibleTriviaQuestions = [
     "answer": "Goliath"
   },
   {
-    "question": "Who was the disciple known as the 'beloved disciple'?",
-    "options": ["John", "James", "Peter", "Andrew"],
-    "answer": "John"
-  },
-  {
     "question": "What did Jesus say is the second greatest commandment?",
     "options": ["Love your enemies", "Honor your parents", "Love your neighbor as yourself", "Keep the Sabbath holy"],
     "answer": "Love your neighbor as yourself"
@@ -153,11 +128,6 @@ const bibleTriviaQuestions = [
     "question": "Who was the mother of Samuel?",
     "options": ["Hannah", "Rachel", "Leah", "Deborah"],
     "answer": "Hannah"
-  },
-  {
-    "question": "What was the name of the city where Jesus was born?",
-    "options": ["Jerusalem", "Nazareth", "Bethlehem", "Capernaum"],
-    "answer": "Bethlehem"
   },
   {
     "question": "Who was the Roman governor that sentenced Jesus to be crucified?",
@@ -245,29 +215,14 @@ const bibleTriviaQuestions = [
     "answer": "Gethsemane"
   },
   {
-    "question": "Who was the father of John the Baptist?",
-    "options": ["Zechariah", "Joachim", "Simeon", "Eli"],
-    "answer": "Zechariah"
-  },
-  {
     "question": "In the parable of the sower, what does the seed represent?",
     "options": ["The Word of God", "Good deeds", "Money", "Friendship"],
     "answer": "The Word of God"
   },
   {
-    "question": "Which disciple betrayed Jesus with a kiss in the Garden of Gethsemane?",
-    "options": ["Peter", "Judas Iscariot", "John", "James"],
-    "answer": "Judas Iscariot"
-  },
-  {
     "question": "Who was the king of Israel famous for his wisdom and building the temple in Jerusalem?",
     "options": ["Saul", "David", "Solomon", "Rehoboam"],
     "answer": "Solomon"
-  },
-  {
-    "question": "Which book of the Bible is known as the 'Song of Solomon'?",
-    "options": ["Psalms", "Proverbs", "Song of Solomon", "Ecclesiastes"],
-    "answer": "Song of Solomon"
   },
   {
     "question": "Who was the wife of Isaac and the mother of Jacob and Esau?",
@@ -285,16 +240,6 @@ const bibleTriviaQuestions = [
     "answer": "Malachi"
   },
   {
-    "question": "Who was the disciple known as the 'doubting Thomas'?",
-    "options": ["John", "James", "Andrew", "Thomas"],
-    "answer": "Thomas"
-  },
-  {
-    "question": "What was the name of the tax collector who climbed a sycamore tree to see Jesus?",
-    "options": ["Matthew", "Zacchaeus", "Philip", "Simon"],
-    "answer": "Zacchaeus"
-  },
-  {
     "question": "Which Old Testament figure led the Israelites across the Jordan River into the Promised Land?",
     "options": ["Moses", "Joshua", "Caleb", "Gideon"],
     "answer": "Joshua"
@@ -310,7 +255,7 @@ const bibleTriviaQuestions = [
     "answer": "Sarah"
   },
   {
-    "question": "What was the name of the woman who anointed Jesus with expensive perfume?",
+    "question": "What was the name of the woman who anointed Jesus with expensive oil?",
     "options": ["Mary Magdalene", "Martha", "Mary of Bethany", "Salome"],
     "answer": "Mary of Bethany"
   },
@@ -345,11 +290,6 @@ const bibleTriviaQuestions = [
     "answer": "Jesse"
   },
   {
-    "question": "Which king of Israel was known for his wisdom and wealth?",
-    "options": ["Solomon", "David", "Hezekiah", "Josiah"],
-    "answer": "Solomon"
-  },
-  {
     "question": "Who was the Roman centurion present at the crucifixion of Jesus, declaring Him to be the Son of God?",
     "options": ["Centurion Cornelius", "Centurion Julius", "Centurion Longinus", "Centurion Augustus"],
     "answer": "Centurion Longinus"
@@ -363,11 +303,6 @@ const bibleTriviaQuestions = [
     "question": "Who was the king of Babylon who saw the handwriting on the wall?",
     "options": ["Nebuchadnezzar", "Belshazzar", "Cyrus", "Darius"],
     "answer": "Belshazzar"
-  },
-  {
-    "question": "Which prophet was carried away to heaven in a chariot of fire?",
-    "options": ["Elijah", "Elisha", "Isaiah", "Jeremiah"],
-    "answer": "Elijah"
   },
   {
     "question": "What was the name of the city where Jesus was born?",
@@ -385,24 +320,9 @@ const bibleTriviaQuestions = [
     "answer": "Gabriel"
   },
   {
-    "question": "Who wrote most of the Psalms in the Bible?",
-    "options": ["Moses", "David", "Solomon", "Asaph"],
-    "answer": "David"
-  },
-  {
     "question": "In the book of Acts, who was stoned to death for his faith in Jesus?",
     "options": ["Stephen", "Paul", "Barnabas", "Peter"],
     "answer": "Stephen"
-  },
-  {
-    "question": "What was the name of the giant Philistine warrior defeated by David with a sling and a stone?",
-    "options": ["Goliath", "Saul", "Jonathan", "Ishbi-Benob"],
-    "answer": "Goliath"
-  },
-  {
-    "question": "Which disciple was a tax collector before following Jesus?",
-    "options": ["Matthew", "John", "James", "Andrew"],
-    "answer": "Matthew"
   },
   {
     "question": "In the parable of the Good Samaritan, who passed by the injured man before the Samaritan helped him?",
@@ -413,11 +333,6 @@ const bibleTriviaQuestions = [
     "question": "What was the name of the river where John the Baptist baptized people?",
     "options": ["Jordan", "Nile", "Euphrates", "Tigris"],
     "answer": "Jordan"
-  },
-  {
-    "question": "Which disciple of Jesus was a tax collector before becoming a follower?",
-    "options": ["Matthew", "Simon Peter", "James", "John"],
-    "answer": "Matthew"
   },
   {
     "question": "What was the name of the city where the disciples received the Holy Spirit on the day of Pentecost?",
@@ -438,11 +353,6 @@ const bibleTriviaQuestions = [
     "question": "What was the name of the man who replaced Judas Iscariot as one of the twelve disciples?",
     "options": ["Matthias", "Barnabas", "Silas", "Timothy"],
     "answer": "Matthias"
-  },
-  {
-    "question": "Which Old Testament prophet was known for his visions of a valley of dry bones coming to life?",
-    "options": ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"],
-    "answer": "Ezekiel"
   },
   {
     "question": "Who was the mother of John the Baptist?",
@@ -628,11 +538,6 @@ const bibleTriviaQuestions = [
     "question": "What was the name of the man who was swallowed by the earth along with his household because of rebellion?",
     "options": ["Dathan", "Korah", "Abiram", "On"],
     "answer": "Korah"
-  },
-  {
-    "question": "In the book of Daniel, which king saw the handwriting on the wall, leading to his downfall?",
-    "options": ["Belshazzar", "Nebuchadnezzar", "Cyrus", "Darius"],
-    "answer": "Belshazzar"
   },
   {
     "question": "Who was the Old Testament prophet who was told to marry a promiscuous woman as a symbolic act?",

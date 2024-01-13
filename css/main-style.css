@@ -4,7 +4,7 @@ body {
     font-family: 'Acme';
 }
 
-body::selection {
+*::selection {
     background: #BCD979;
 }
 
