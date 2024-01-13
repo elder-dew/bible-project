@@ -1,12 +1,13 @@
 body {
     margin: 0;
     overflow: hidden;
-    height: 100vh;
+    height: 100svh;
 }
 
 #mainContentCont {
     margin: 0;
-    height: 100vh;
+    height: 100svh;
+    
     overflow: hidden;
     display: flex;
     flex-direction: column;
