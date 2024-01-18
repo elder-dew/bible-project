@@ -708,5 +708,35 @@ const bibleTriviaQuestions = [
     "question": "Where was the garden where Jesus prayed before his arrest, commonly known as the Garden of Gethsemane?",
     "options": ["Mount of Olives", "Mount Zion", "Mount Moriah", "Mount Sinai"],
     "answer": "Mount of Olives"
+  },
+  {
+    "question": "To have peace that passes all understanding, we must do what? (Philippians 4:6-7)",
+    "options": ["Pray with thanksgiving", "Worry about everything", "Seek worldly pleasures", "Ignore our troubles"],
+    "answer": "Pray with thanksgiving"
+  },
+  {
+    "question": "How can we abide in Christ's love and be filled with joy? (John 15:10-11)",
+    "options": ["Disobey His commands", "Keep His commands", "Pursue selfish desires", "Reject His teachings"],
+    "answer": "Keep His commands"
+  },
+  {
+    "question": "If a man dies, shall he live again? (Job 14:14)",
+    "options": ["No, death is final", "Yes, through reincarnation", "Yes, through resurrection", "Depends on one's deeds"],
+    "answer": "Yes, through resurrection"
+  },
+  {
+    "question": "I know that my Redeemer _________, and that he shall stand at the latter day upon the earth. (Job 19:25)",
+    "options": ["Lives forever", "Is merciful", "Is just", "Liveth"],
+    "answer": "Liveth"
+  },
+  {
+    "question": "The Lord is my ______, and my fortress, and my deliverer; my God, my strength, in whom I will trust; my buckler, and the horn of my salvation, and my high tower. (Psalm 18:2)",
+    "options": ["Shepherd", "Provider", "Rock", "Companion"],
+    "answer": "Rock"
+  },
+  {
+    "question": "Come now, and let us reason together, saith the Lord: though your _____ be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool. (Isaiah 1:18)",
+    "options": ["Sins", "Garments", "Thoughts", "Actions"],
+    "answer": "Sins"
   }
 ]
