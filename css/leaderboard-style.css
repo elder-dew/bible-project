@@ -88,13 +88,13 @@ body {
 
 @keyframes grow-shrink {
     0% {
-        font-size: inherit;
+        font-size: 1em;
     }
     50% {
-        font-size: 40px;
+        font-size: 40em;
     }
     100% {
-        font-size: inherit;
+        font-size: 1em;
     }
 }
 
