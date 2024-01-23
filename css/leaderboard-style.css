@@ -52,6 +52,12 @@ body {
     width: 80vw;
 }
 
+#referButton {
+    animation-name: grow-shrink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
 #playerList {
     display: flex;
     scroll-behavior: smooth;
@@ -78,6 +84,18 @@ body {
 .player#newPlayer {
     animation-name: new-player;
     animation-duration: 2s;
+}
+
+@keyframes grow-shrink {
+    0% {
+        font-size: inherit;
+    }
+    50% {
+        font-size: 40px;
+    }
+    100% {
+        font-size: inherit;
+    }
 }
 
 @keyframes new-player {
