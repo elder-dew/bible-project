@@ -53,7 +53,7 @@ body {
 }
 
 #referButton {
-    animation-name: grow-shrink;
+    /*animation-name: grow-shrink;*/
     animation-duration: 2s;
     animation-iteration-count: infinite;
     position: fixed;
