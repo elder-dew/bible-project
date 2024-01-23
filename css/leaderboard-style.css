@@ -87,14 +87,9 @@ body {
 }
 
 @keyframes grow-shrink {
-    0% {
-        font-size: 1em;
-    }
-    50% {
-        font-size: 40em;
-    }
-    100% {
-        font-size: 1em;
+    from {
+        color: red;
+        color: rebeccapurple;
     }
 }
 
