@@ -89,6 +89,8 @@ body {
 @keyframes grow-shrink {
     from {
         color: red;
+    }
+    to {
         color: rebeccapurple;
     }
 }
